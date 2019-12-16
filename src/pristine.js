@@ -37,6 +37,7 @@ _('min', { fn: function(val, limit){ return !val || (this.type === 'checkbox' ? 
 _('max', { fn: function(val, limit){ return !val || (this.type === 'checkbox' ? groupedElemCount(this) <= parseInt(limit) : parseFloat(val) <= parseFloat(limit)); } });
 _('pattern', { fn: (val, pattern) => { let m = pattern.match(new RegExp('^/(.*?)/([gimy]*)$')); return !val || (new RegExp(m[1], m[2])).test(val);} });
 _('phone', { fn: (val) => val && /^[0-9+ ]{9,13}$/.test(val) });
+_('tel', { fn: (val) => val && /^[0-9+ ]{9,13}$/.test(val) });
 
 export default function Pristine(form, config, live){
 
