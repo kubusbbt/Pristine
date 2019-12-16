@@ -1,4 +1,8 @@
 ```javascript
+npm install c3rpristinejs --save-dev
+```
+
+```javascript
 import Pristine from '../node_modules/c3rpristinejs/src/pristine.js';
 
 window.onload = function () {
